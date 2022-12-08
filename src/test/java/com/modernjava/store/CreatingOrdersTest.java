@@ -1,10 +1,17 @@
 package com.modernjava.store;
 
 
+import com.fasterxml.jackson.databind.DeserializationContext;
+import org.apache.tomcat.util.json.JSONParser;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.math.BigDecimal;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -153,6 +160,22 @@ public class CreatingOrdersTest {
         assertEquals(10, itemsInOrder);
     }
 
+    /*
+    read test_orders  - into an Order object - deserialization
+    something like Order fileOrder = objectMapper.readValue(test_file, Order.class)
+    in the test, check if generated object methods work
+    questions:
+    1. Jackson dependency?
+    2. add (which?) annotation to Order class?
 
+    @Test
+    void deserializeJsonFile() throws FileNotFoundException {
+        DeserializationContext objectMapper;
 
+     file >> test_orders
+
+        // HINT:
+        // var deserializedOrders = objectMapper.readValue(testFile, new TypeReference<List<Order>>() {});
+    }
+    */
 }
