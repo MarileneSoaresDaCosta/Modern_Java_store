@@ -1,13 +1,15 @@
 package com.modernjava.store;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-@Data
-@AllArgsConstructor
+//@Data
+//@AllArgsConstructor
+@ToString
+@Getter
+@Builder
 public class Order {
     private Address altShippingAddress;
     private List<OrderItem> items;

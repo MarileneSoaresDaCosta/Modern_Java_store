@@ -1,15 +1,15 @@
 package com.modernjava.store;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+//@Data
+//@NoArgsConstructor
+//@AllArgsConstructor
+@ToString
+@Getter
+@Builder
 public class Address {
     private String locality;
     private List<String> addressLines;

@@ -1,10 +1,12 @@
 package com.modernjava.store;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
-@Data
-@AllArgsConstructor
+//@Data
+//@AllArgsConstructor
+@ToString
+@Getter
+@Builder
 public class Customer {
     private String name;
     private Address shippingAddress;
